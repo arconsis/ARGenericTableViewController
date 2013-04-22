@@ -66,6 +66,11 @@
     return [self initWithStyle:UITableViewStylePlain];
 }
 
+- (void)dealloc
+{
+    [self.tableView removeObserver:self forKeyPath:@"editing"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
