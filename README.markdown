@@ -51,7 +51,7 @@ Example
     
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:@"Cell"];
     cellData.editable = YES;
-    cellData.heigth = 44;
+    cellData.height = 44;
 
     [cellData setCellConfigurationBlock:^(UITableViewCell *cell) {
         // called in cellForRowAtIndexPath
