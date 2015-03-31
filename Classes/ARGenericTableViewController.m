@@ -68,7 +68,9 @@
 
 - (void)dealloc
 {
-    [self.tableView removeObserver:self forKeyPath:@"editing"];
+    if (self.isViewLoaded) {
+      [self.tableView removeObserver:self forKeyPath:@"editing"];      
+    }
 }
 
 - (void)viewDidLoad
